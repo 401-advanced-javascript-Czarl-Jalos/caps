@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/401-advanced-javascript-Czarl-Jalos/caps#readme",
   "dependencies": {
-    "events": "^3.2.0"
+    "dotenv": "^8.2.0",
+    "events": "^3.2.0",
+    "faker": "^5.1.0",
+    "socket.io": "^2.3.0"
   }
 }
