@@ -8,7 +8,11 @@ const io = require('socket.io')(process.env.PORT || 3000);
 // Create and accept connections on a namespace called caps
 const caps = io.of('/caps'); // our NAMESPACE
 
-  // This is saying: "When someone broadcasts 'getall', we'll do this." - who should broadcast it? THE DRIVER! (whenever they connect)
+caps.on('connection', socket => {
+  console.log('Connected on: ', socket.id);
+
+
+  
   socket.on('getall', () => {
     for (let id in messages) {
       const payload = messages[id];
